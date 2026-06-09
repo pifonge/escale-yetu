@@ -1,0 +1,1 @@
+export const siteEn = { name: 'Escale Yetu', tagline: 'Just good. Just authentic. Just us.', positionnement: 'The destination for authenticity', address: 'Katre Yaar, Ouagadougou, Burkina Faso', phone: ['+226 62 73 73 64', '+226 74 44 03 32'], hours: 'Tuesday to Sunday, 9:30 AM - 11:30 PM', email: 'contact@restoyetu.com' }

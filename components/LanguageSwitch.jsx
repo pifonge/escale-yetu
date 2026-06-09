@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function LanguageSwitch(){ return (<div className="flex gap-2"><Link href="/?lang=fr" className="rounded-full border px-3 py-1 text-xs">FR</Link><Link href="/?lang=en" className="rounded-full border px-3 py-1 text-xs">EN</Link></div>); }

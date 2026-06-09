@@ -1,0 +1,2 @@
+import Header from '../../components/Header'; import Footer from '../../components/Footer';
+export default function Legal(){ return (<main><Header/><section className="mx-auto max-w-4xl px-6 py-16"><h1 className="text-4xl font-bold">Mentions légales</h1><p className="mt-4 text-gray-600">Page à compléter avec les informations juridiques de l’établissement.</p></section><Footer/></main>); }

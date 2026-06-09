@@ -1,0 +1,2 @@
+import Header from '../../components/Header'; import Footer from '../../components/Footer'; import SectionTitle from '../../components/SectionTitle';
+export default function Portfolio(){ return (<main><Header/><section className="mx-auto max-w-5xl px-6 py-16"><SectionTitle eyebrow="Portfolio" title="Événements, collaborations, moments forts" text="Section prévue pour les projets, soirées thématiques et publications médias."/><div className="mt-10 rounded-3xl border p-8 text-gray-600">Page portfolio prête à recevoir les contenus.</div></section><Footer/></main>); }

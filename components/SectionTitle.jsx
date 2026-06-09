@@ -1,0 +1,1 @@
+export default function SectionTitle({ eyebrow, title, text }){ return (<div className='max-w-3xl'><p className='text-xs uppercase tracking-[0.25em] text-gold'>{eyebrow}</p><h2 className='mt-3 text-3xl font-bold md:text-4xl'>{title}</h2>{text && <p className='mt-4 text-gray-600'>{text}</p>}</div>); }

@@ -1,0 +1,1 @@
+@tailwind base; @tailwind components; @tailwind utilities; :root{color-scheme:light} html{scroll-behavior:smooth} body{font-family:Inter,Arial,sans-serif;background:#fff;color:#111} a{text-decoration:none} .glass{backdrop-filter:blur(14px); background:rgba(255,255,255,.8)}

@@ -1,0 +1,8 @@
+[
+  {"label":"Accueil","href":"/"},
+  {"label":"À propos","href":"/a-propos"},
+  {"label":"Menu","href":"/menu"},
+  {"label":"Ambiance","href":"/galerie"},
+  {"label":"Articles","href":"/articles"},
+  {"label":"Réserver","href":"/contact"}
+]

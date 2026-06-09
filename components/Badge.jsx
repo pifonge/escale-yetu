@@ -1,0 +1,1 @@
+export default function Badge({ children }){ return <span className='inline-flex rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-gold'>{children}</span> }

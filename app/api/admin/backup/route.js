@@ -1,0 +1,1 @@
+import { isAdminSession } from '../../../../lib/auth'; import { createSnapshot } from '../../../../lib/backup'; import { site } from '../../../../content/site'; export async function GET(req){ if (!isAdminSession(req)) return Response.json({ ok:false, error:'Unauthorized' }, { status: 401 }); return Response.json(createSnapshot({ site })); }

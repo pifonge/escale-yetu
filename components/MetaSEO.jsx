@@ -1,0 +1,1 @@
+export default function MetaSEO({ title, description }){ return null; }

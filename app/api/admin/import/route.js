@@ -1,0 +1,1 @@
+import { isAdminSession } from '../../../../lib/auth'; export async function POST(req){ if (!isAdminSession(req)) return Response.json({ ok:false, error:'Unauthorized' }, { status: 401 }); const data = await req.json(); return Response.json({ ok:true, imported: Object.keys(data || {}) }); }

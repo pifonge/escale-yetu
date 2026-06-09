@@ -1,0 +1,2 @@
+import { site } from '../content/site';
+export default function Footer(){ return (<footer className="border-t bg-ink text-white"><div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3"><div><h3 className="text-lg font-semibold">{site.name}</h3><p className="mt-3 text-sm text-white/70">{site.tagline}</p></div><div className="text-sm text-white/75"><p>{site.address}</p><p className="mt-2">{site.hours}</p></div><div className="text-sm text-white/75"><p>{site.phone[0]}</p><p>{site.phone[1]}</p><p className="mt-2">{site.email}</p></div></div></footer>); }

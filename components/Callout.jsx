@@ -1,0 +1,1 @@
+export default function Callout({ title, text }){ return (<div className='rounded-[2rem] bg-ink p-8 text-white shadow-soft'><p className='text-sm uppercase tracking-[0.25em] text-gold'>{title}</p><p className='mt-4 text-lg text-white/80'>{text}</p></div>); }

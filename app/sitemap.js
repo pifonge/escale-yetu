@@ -1,0 +1,1 @@
+export default function sitemap(){ return [{ url: 'https://restoyetu.com', lastModified: new Date() }]; }

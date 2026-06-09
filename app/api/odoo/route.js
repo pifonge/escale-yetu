@@ -1,0 +1,1 @@
+import { postToOdoo } from '../../../lib/odoo'; export async function POST(req){ const body = await req.json(); const result = await postToOdoo('/crm/leads', body); return Response.json({ ok: result.ok, result }); }

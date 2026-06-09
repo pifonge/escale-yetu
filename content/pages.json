@@ -1,0 +1,9 @@
+[
+  {"slug":"accueil","title":"Accueil"},
+  {"slug":"a-propos","title":"À propos"},
+  {"slug":"menu","title":"Menu"},
+  {"slug":"galerie","title":"Galerie"},
+  {"slug":"articles","title":"Articles"},
+  {"slug":"portfolio","title":"Portfolio"},
+  {"slug":"contact","title":"Contact"}
+]

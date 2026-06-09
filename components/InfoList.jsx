@@ -1,0 +1,1 @@
+export default function InfoList({ items=[] }){ return (<div className='grid gap-3'>{items.map(([a,b])=><div key={a} className='flex items-center justify-between rounded-2xl border bg-white px-4 py-3'><span>{a}</span><span className='text-gray-500'>{b}</span></div>)}</div>); }
