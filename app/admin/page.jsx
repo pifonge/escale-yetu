@@ -13,15 +13,20 @@ interface MenuItem {
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('dashboard');
 
-  // Menu state
+  // === MENU ===
   const [menuItems, setMenuItems] = useState<MenuItem[]>([
     { id: 1, name: "Planche Yetu", price: "3000 FCFA", desc: "Brochettes de Poulet/poisson pané, frites, salades", category: "Spécialités Yetu" },
     { id: 2, name: "Poulet Mayo Yetu", price: "6500 FCFA", desc: "Poulet, oignons, poivrons, mayonnaise", category: "Spécialités Yetu" },
   ]);
 
-  const [newMenuItem, setNewMenuItem] = useState({ name: '', price: '', desc: '', category: 'Spécialités Yetu' });
+  const [newMenuItem, setNewMenuItem] = useState({ 
+    name: '', 
+    price: '', 
+    desc: '', 
+    category: 'Spécialités Yetu' 
+  });
 
-  // Settings state
+  // === PARAMÈTRES ===
   const [settings, setSettings] = useState({
     restaurantName: "Escale Yetu",
     address: "Katre Yaar, Ouagadougou",
@@ -39,30 +44,36 @@ export default function AdminDashboard() {
     { id: 'settings', label: 'Paramètres' },
   ];
 
-  // Add menu item
+  // Ajouter un plat
   const addMenuItem = () => {
-    if (!newMenuItem.name || !newMenuItem.price) return;
+    if (!newMenuItem.name || !newMenuItem.price) {
+      alert("Veuillez remplir au moins le nom et le prix");
+      return;
+    }
     
     const newItem: MenuItem = {
       id: Date.now(),
-      ...newMenuItem
+      name: newMenuItem.name,
+      price: newMenuItem.price,
+      desc: newMenuItem.desc,
+      category: newMenuItem.category,
     };
+    
     setMenuItems([...menuItems, newItem]);
     setNewMenuItem({ name: '', price: '', desc: '', category: 'Spécialités Yetu' });
     alert("Plat ajouté avec succès !");
   };
 
-  // Delete menu item
+  // Supprimer un plat
   const deleteMenuItem = (id: number) => {
-    if (confirm("Supprimer ce plat ?")) {
+    if (confirm("Voulez-vous vraiment supprimer ce plat ?")) {
       setMenuItems(menuItems.filter(item => item.id !== id));
     }
   };
 
-  // Save settings
+  // Sauvegarder les paramètres
   const saveSettings = () => {
     alert("Paramètres enregistrés avec succès !");
-    // In real version, this would save to database
   };
 
   return (
@@ -92,25 +103,7 @@ export default function AdminDashboard() {
         {activeTab === 'dashboard' && (
           <div className="card p-8">
             <h2 className="text-2xl mb-4">Bienvenue dans l'administration</h2>
-            <p>Utilisez les onglets ci-dessus pour gérer votre site Escale Yetu.</p>
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white p-4 rounded-xl text-center">
-                <div className="text-3xl font-light text-[#C8883A]">{menuItems.length}</div>
-                <div className="text-sm">Plats au menu</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl text-center">
-                <div className="text-3xl font-light text-[#C8883A]">3</div>
-                <div className="text-sm">Articles</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl text-center">
-                <div className="text-3xl font-light text-[#C8883A]">12</div>
-                <div className="text-sm">Pages</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl text-center">
-                <div className="text-3xl font-light text-[#C8883A]">46</div>
-                <div className="text-sm">Médias</div>
-              </div>
-            </div>
+            <p>Utilisez les onglets ci-dessus pour gérer votre site.</p>
           </div>
         )}
 
@@ -184,7 +177,7 @@ export default function AdminDashboard() {
         {activeTab === 'articles' && (
           <div className="card p-8">
             <h2>Gestion des Articles</h2>
-            <p className="mt-4">Fonctionnalité à venir. Vous pourrez ajouter des articles de blog ici.</p>
+            <p className="mt-4">Vous pourrez ajouter des articles de blog ici.</p>
           </div>
         )}
 
