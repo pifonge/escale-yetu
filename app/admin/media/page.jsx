@@ -1,1 +1,0 @@
-export default function AdminMedia(){ return (<main className="space-y-6"><h1 className="text-3xl font-bold">Médias</h1><div className="grid gap-4 md:grid-cols-3">{['Logo','Hero 1','Hero 2','Plat signature','Ambiance','Portrait'].map(x=><div key={x} className="rounded-3xl bg-white p-6 shadow-soft">{x}</div>)}</div></main>); }
